@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.env.local
+*.log
+
+# Claude Code local settings (perso, ne pas committer)
+.claude/settings.local.json
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~

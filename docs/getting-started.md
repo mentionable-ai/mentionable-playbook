@@ -81,7 +81,9 @@ Redémarre Claude Desktop.
 
 ### Méthode B — Auth par query string (fallback simple)
 
-> **Tutoriel vidéo** : [setup MCP Mentionable sur Claude (web / desktop) et ChatGPT via clé en URL](https://youtu.be/C1EbdAnwRRo?si=peBBhagn_e_e_rzj)
+**Tutoriel vidéo** — setup MCP Mentionable sur Claude (web / desktop) et ChatGPT via clé en URL :
+
+[![Tutoriel : setup MCP Mentionable via clé en URL](https://img.youtube.com/vi/C1EbdAnwRRo/maxresdefault.jpg)](https://youtu.be/C1EbdAnwRRo?si=peBBhagn_e_e_rzj)
 
 Si tu galères avec la config par header (variable d'env qui ne se charge pas, fichier de conf qui n'est pas pris en compte, client qui ignore les `headers`), tu peux passer ta clé directement dans l'URL :
 
@@ -126,7 +128,7 @@ claude mcp add mentionable \
 ## 4. Cloner ce repo
 
 ```bash
-git clone https://github.com/<votre-org>/mentionable-playbook.git
+git clone https://github.com/mentionable-ai/mentionable-playbook.git
 cd mentionable-playbook
 ```
 

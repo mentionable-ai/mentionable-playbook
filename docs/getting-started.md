@@ -136,7 +136,9 @@ Si tu utilises Claude Code, les **slash commands** dans `.claude/commands/` sont
 
 ## 5. Premier appel
 
-### Sur Claude Code
+Deux points d'entrée selon ce que tu veux faire :
+
+### A. Diagnostiquer un projet existant
 
 ```
 /mentionable-audit
@@ -148,9 +150,17 @@ Si tu as plusieurs projets, précise lequel :
 /mentionable-audit nom-de-mon-projet
 ```
 
-### Sur autre client
+### B. Démarrer une production de contenu
 
-Ouvre `[playbooks/01-audit-geo-initial.md](../playbooks/01-audit-geo-initial.md)`, copie le prompt, colle-le dans ton chat. L'agent va appeler les tools MCP et te rendre l'audit.
+```
+/mentionable-clusters
+```
+
+Cette commande clusterise les fan-outs LLM par thème + intent et produit un fichier `clusters.json` qui sert de passerelle vers `/mentionable-pillar` puis `/mentionable-article`. C'est le point d'entrée du workflow complet (cf. [README.md](../README.md#workflow-complet--du-signal-llm-à-larticle-publié)).
+
+### Sur autre client (Cursor, Claude Desktop, etc.)
+
+Ouvre [`playbooks/01-audit-geo-initial.md`](../playbooks/01-audit-geo-initial.md), copie le prompt, colle-le dans ton chat. L'agent va appeler les tools MCP et te rendre l'audit. Chaque autre playbook fonctionne de la même façon.
 
 ## Vérifier que ça marche
 
@@ -166,5 +176,7 @@ Si tu obtiens une erreur :
 
 - Lis les [concepts GEO](concepts.md) si tu débutes
 - Parcours la [reference des tools](tools-reference.md)
-- Explore les [8 playbooks](../playbooks/)
+- Explore les [12 playbooks](../playbooks/) — diagnostic, production de contenu (pilier + satellites + articles GEO + images), outreach, reporting
+- Pour produire du contenu : suis le [workflow complet recommandé](../README.md#workflow-complet--du-signal-llm-à-larticle-publié) (clusters → pillar → article → images)
+- Configure les pré-requis pour les commandes avancées : [DataForSEO](dataforseo-setup.md) (pour `/mentionable-pillar`), [Gemini](images-setup.md) (pour `/mentionable-images`)
 

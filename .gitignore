@@ -11,3 +11,16 @@
 .idea/
 *.swp
 *~
+
+# Node
+node_modules/
+
+# Contenu local par projet Mentionable (pillars, articles, images, JSON-LD…)
+projects/
+
+# Legacy : anciens dossiers à plat (avant scoping projet)
+articles/
+pillars/
+
+# Infos auteur perso pour JSON-LD /mentionable-article
+author.json
